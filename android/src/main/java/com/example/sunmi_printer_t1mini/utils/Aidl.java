@@ -178,6 +178,8 @@ public class Aidl{
     }
 
     try {
+      //align center
+      woyouService.setAlignment(1, null);
         woyouService.printQRCode(data, modulesize, errorlevel, null);
     } catch (RemoteException e) {
         e.printStackTrace();
