@@ -118,6 +118,9 @@ public class SunmiPrinter{
   public void printQRCode(String data, int modulesize, int errorlevel){
     Aidl.getInstance().printQRCode( data,  modulesize,  errorlevel);
   }
+  public void openDrawer(){
+    Aidl.getInstance().openDrawer());
+  }
 
 
 }

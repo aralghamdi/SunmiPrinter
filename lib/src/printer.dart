@@ -16,6 +16,7 @@ class Printer{
   static const String PRINT_IMAGE = "printImage";
   static const String CUT_PAPER = "cutPaper";
   static const String PRINT_QR = "printQR";
+  static const String OPEN_DRAWER = "openDrawer";
 
   static const MethodChannel _channel =
     const MethodChannel('sunmi_printer_t1mini');
@@ -115,6 +116,9 @@ class Printer{
       "modulesize":moduleSize,
       "errorlevel":errorLevel
     });
+  }
+  static Future<void> openDrawer() async {
+    await _channel.invokeMethod(OPEN_DRAWER);
   }
 
 

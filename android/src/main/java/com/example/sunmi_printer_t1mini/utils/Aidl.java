@@ -182,5 +182,15 @@ public class Aidl{
     } catch (RemoteException e) {
         e.printStackTrace();
     }
+    public void openDrawer(){
+      if (woyouService == null) {
+        return;
+    }
+
+    try {
+        woyouService.openDrawer(null);
+    } catch (RemoteException e) {
+        e.printStackTrace();
+    }
     }
 }
