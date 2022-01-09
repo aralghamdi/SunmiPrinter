@@ -199,7 +199,7 @@ public class Aidl{
 
   public int getWidth(){
   try{
-    int width =  woyouService.getPrintedLength();
+    int width =  woyouService.getPrinterModal();
     return width;
   } catch (RemoteException e) {
       
