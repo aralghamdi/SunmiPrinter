@@ -203,7 +203,7 @@ public class Aidl{
   }
 
   try {
-      woyouService.getPrintedLength();
+      return woyouService.getPrintedLength();
   } catch (RemoteException e) {
       e.printStackTrace();
   }
