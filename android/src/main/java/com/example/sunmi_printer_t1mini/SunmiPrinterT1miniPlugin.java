@@ -90,7 +90,7 @@ public class SunmiPrinterT1miniPlugin implements FlutterPlugin, MethodCallHandle
       sunmiPrinter.openDrawer();
       result.success(null);
     } else if(call.method.equals(getPrinterWidth)){
-      int width = sunmiPrinter.getPrinterWidth();
+      String width = sunmiPrinter.getPrinterWidth();
       result.success(width);
     }else {
       result.notImplemented();
