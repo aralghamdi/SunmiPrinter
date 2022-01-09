@@ -204,7 +204,7 @@ public class Aidl{
   } catch (RemoteException e) {
       
       e.printStackTrace();
-      return '2000';
+      return "2000";
   }
 }
     
