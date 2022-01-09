@@ -197,7 +197,7 @@ public class Aidl{
     }
   }
 
-  public void getWidth(){
+  public int getWidth(){
     if (woyouService == null) {
       return;
   }
