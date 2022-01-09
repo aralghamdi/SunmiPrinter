@@ -17,6 +17,7 @@ class Printer{
   static const String CUT_PAPER = "cutPaper";
   static const String PRINT_QR = "printQR";
   static const String OPEN_DRAWER = "openDrawer";
+  static const String GET_PRINTER_WIDTH = "getPrinterWidth";
 
   static const MethodChannel _channel =
     const MethodChannel('sunmi_printer_t1mini');
@@ -25,6 +26,15 @@ class Printer{
     ) async {
      var returnVal;
     await _channel.invokeMethod(PRINTER_STATUS, {
+    }).then((value) => {
+      returnVal = value
+    }) ;
+    return returnVal;
+  }
+  static Future<int> getPrinterWidth(
+    ) async {
+     var returnVal;
+    await _channel.invokeMethod(GET_PRINTER_WIDTH, {
     }).then((value) => {
       returnVal = value
     }) ;

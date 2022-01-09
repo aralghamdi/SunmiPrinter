@@ -121,6 +121,9 @@ public class SunmiPrinter{
   public void openDrawer(){
     Aidl.getInstance().openDrawer();
   }
+  public void getPrinterWidth(){
+    Aidl.getInstance().getWidth();
+  }
 
 
 }

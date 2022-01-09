@@ -24,6 +24,7 @@ public class SunmiPrinterT1miniPlugin implements FlutterPlugin, MethodCallHandle
   private String CUT_PAPER = "cutPaper";
   private String PRINT_QR = "printQR";
   private String OPEN_DRAWER = "openDrawer";
+  private String getPrinterWidth = "getPrinterWidth";
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
@@ -88,6 +89,9 @@ public class SunmiPrinterT1miniPlugin implements FlutterPlugin, MethodCallHandle
     } else if(call.method.equals(OPEN_DRAWER)){
       sunmiPrinter.openDrawer();
       result.success(null);
+    } else if(call.method.equals(getPrinterWidth)){
+      int width = sunmiPrinter.getPrinterWidth();
+      result.success(width);
     }else {
       result.notImplemented();
     }

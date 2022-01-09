@@ -196,5 +196,17 @@ public class Aidl{
         e.printStackTrace();
     }
   }
+
+  public void getWidth(){
+    if (woyouService == null) {
+      return;
+  }
+
+  try {
+      woyouService.getPrintedLength();
+  } catch (RemoteException e) {
+      e.printStackTrace();
+  }
+}
     
 }
