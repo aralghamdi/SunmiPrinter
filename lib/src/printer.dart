@@ -31,7 +31,7 @@ class Printer{
     }) ;
     return returnVal;
   }
-  static Future<int> getPrinterWidth(
+  static Future<String> getPrinterWidth(
     ) async {
      var returnVal;
     await _channel.invokeMethod(GET_PRINTER_WIDTH, {
