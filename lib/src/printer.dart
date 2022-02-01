@@ -91,9 +91,9 @@ class Printer{
     bool bold: false,
     PrintSize textSize: PrintSize.md,
   }) async {
-    final isSumValid = cols.fold(0, (int sum, col) => sum + col.width) == 12;
+    final isSumValid = cols.fold(0, (int sum, col) => sum + col.width) == 10;
     if (!isSumValid) {
-      throw Exception('Total columns width must be equal to 12');
+      throw Exception('Total columns width must be equal to 10');
     }
 
     final colsJson = List<Map<String, String>>.from(
